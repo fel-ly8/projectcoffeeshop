@@ -1,16 +1,15 @@
-// Fetch all posts from the server
+// Fetching all posts from the server
 fetch('http://localhost:3000/coffee')
   .then((response) => response.json())
   .then((data) => {
-    console.log(data); // Log the response data for debugging purposes
+    console.log(data); 
     const coffee = document.getElementById("coffee");
     
-    // Clear the existing content (to prevent repeated appends)
+    
     coffee.innerHTML = "";
 
-    // Loop through each post in the fetched data
     for (let post of data) {
-        // Dynamically create the HTML structure and append it to the container
+       
         coffee.innerHTML += `
             <div class="col-md-3">
               <img src="${post.imageURL}" alt="${post.title}">
@@ -27,10 +26,10 @@ fetch('http://localhost:3000/coffee')
             </div>`;
     }})
   .catch((error) => {
-    console.error('Error fetching data:', error); // Catch and log any errors
+    console.error('Error fetching data:', error); 
   });
 
-  // add post
+  // adding a post with images 
 const add_form = document.getElementById("post_form");
 
 add_form.addEventListener("submit", (event) => {
@@ -68,7 +67,7 @@ add_form.addEventListener("submit", (event) => {
 });
 
 
-// delete post
+// deleting the post created
 function deletePost(id) {
   fetch(`http://localhost:3000/coffee/${id}`, {
     method: 'DELETE',
@@ -85,7 +84,7 @@ function deletePost(id) {
   });
 }
 
-// edit post
+// updating the post created
 function editPost(id) {
   fetch(`http://localhost:3000/coffee/${id}`)
     .then((response) => response.json())
@@ -145,7 +144,7 @@ function editPost(id) {
             update_message.innerText = "Post updated successfully";
           })
           .catch((error) => {
-            // Optional: Handle errors if the PATCH request fails
+            
             const update_message = document.getElementById("update_message");
             update_message.innerText = "Failed to edit post";
             update_message.classList.remove("text-success");
