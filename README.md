@@ -16,7 +16,7 @@ The appplication includes a landing page showing what I do, my education backgro
 
 ## Live server
 
-You can view the web live on ()
+You can view the web live on (https://fel-ly8.github.io/projectcoffeeshop/)
 render link(https://projectcoffeeshop.onrender.com)
 
 ## Known bugs  
