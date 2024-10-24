@@ -1,5 +1,5 @@
 // Fetching all posts from the server
-fetch('http://localhost:3000/coffee')
+fetch('https://projectcoffeeshop.onrender.com/coffee')
   .then((response) => response.json())
   .then((data) => {
     console.log(data); 
@@ -42,7 +42,7 @@ add_form.addEventListener("submit", (event) => {
 
   console.log(title, image, price, amount);
   
-  fetch('http://localhost:3000/coffee', { 
+  fetch('https://projectcoffeeshop.onrender.com/coffee', { 
     method: 'POST',
     body: JSON.stringify({
       title: title,
@@ -69,7 +69,7 @@ add_form.addEventListener("submit", (event) => {
 
 // deleting the post created
 function deletePost(id) {
-  fetch(`http://localhost:3000/coffee/${id}`, {
+  fetch(`https://projectcoffeeshop.onrender.com/coffee/${id}`, {
     method: 'DELETE',
   })
   .then((res) => res.json())
@@ -86,7 +86,7 @@ function deletePost(id) {
 
 // updating the post created
 function editPost(id) {
-  fetch(`http://localhost:3000/coffee/${id}`)
+  fetch(`https://projectcoffeeshop.onrender.com/coffee/${id}`)
     .then((response) => response.json())
     .then((data) => {
       const update_container = document.getElementById("update_container");
@@ -126,7 +126,7 @@ function editPost(id) {
         console.log(title, image, price,amount);
 
         
-        fetch(`http://localhost:3000/coffee/${id}`, {
+        fetch(`https://projectcoffeeshop.onrender.com/coffee/${id}`, {
           method: 'PATCH',
           body: JSON.stringify({
             title: title,
