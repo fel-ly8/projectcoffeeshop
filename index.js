@@ -3,15 +3,15 @@ fetch('http://localhost:3000/coffee')
   .then((response) => response.json())
   .then((data) => {
     console.log(data); // Log the response data for debugging purposes
-    const bathtub_low = document.getElementById("coffee");
+    const coffee = document.getElementById("coffee");
     
     // Clear the existing content (to prevent repeated appends)
-    bathtub_low.innerHTML = "";
+    coffee.innerHTML = "";
 
     // Loop through each post in the fetched data
     for (let post of data) {
         // Dynamically create the HTML structure and append it to the container
-        bathtub_low.innerHTML += `
+        coffee.innerHTML += `
             <div class="col-md-3">
               <img src="${post.imageURL}" alt="${post.title}">
               <h4>${post.title}</h4>
