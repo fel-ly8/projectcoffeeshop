@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Lover</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- navbar -->
+    <div class="header">
+        <div class="main">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./shop.html">PRODUCTS</a></li>
+                       
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- add post -->
+    <div class="cont">
+        <div class="cont-name p-2 mt-1" style="width: 50vw;">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                ADD POST
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h5>Add Post</h5>
+                            <div id="prompt" class="text-success" role="alert">
+                                <!-- Your success message will be displayed here -->
+                            </div>
+                            <form id="post_form" class="post_form">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Enter Title" id="title" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Image URL" id="imageURL" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="number" class="form-control" placeholder="Price" id="price" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="number" class="form-control" placeholder="Amount" id="amount" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- update post -->
+    <div id="update_container" class="mx-auto mt-2 p-3" style="width: 50vw; background-color: white;">
+        <!-- Your update form will appear here -->
+    </div>
+
+    <!-- post -->
+    <div id="list">
+        <div id="del_message" class="text-success" role="alert">
+            <!-- Your  delete successfully message will be displayed here -->
+        </div>
+        <div id="coffee" class="raw">
+            <!-- Your coffee posts will be displayed here-->
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <hr>
+            <p class="Copyright">Copyright &copy;2024:All Rights Reserved</p>
+        </div>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

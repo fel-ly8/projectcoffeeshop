@@ -1,0 +1,25 @@
+{
+    "coffee": [
+      {
+        "id": "1",
+        "title": "Black Coffee",
+        "price": "$20.00",
+        "amount": "200ml",
+        "imageURL": "./images/blackcoffee.jpeg"
+      },
+      {
+        "id": "2",
+        "title": "Brown Coffee",
+        "price": "$25.00",
+        "amount": "150ml",
+        "imageURL": "./images/browcoffee.jpeg"
+      },
+      {
+        "id": "3",
+        "title": "Nescafe",
+        "price": "$30.00",
+        "amount": "250ml",
+        "imageURL": "./images/nescaffee.jpeg"
+      }
+    ]
+  }
